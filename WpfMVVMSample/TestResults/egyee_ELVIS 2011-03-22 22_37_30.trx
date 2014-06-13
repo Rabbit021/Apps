@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2b415e1a-560d-4142-bd61-c1ffa4b86b27" name="egyee@ELVIS 2011-03-22 22:37:30" runUser="elvis\egyee" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="722243e1-419e-4b75-bd87-36ce219246a9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="egyee_ELVIS 2011-03-22 22_37_30">
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Foundation\bin\Debug\WpfMVVMSample.Foundation.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.ViewModels\bin\Debug\WpfMVVMSample.ViewModels.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Models\bin\Debug\WpfMVVMSample.Models.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.IService\bin\Debug\WpfMVVMSample.IService.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-22T22:37:30.5105876+08:00" queuing="2011-03-22T22:37:30.5245884+08:00" start="2011-03-22T22:37:30.5585904+08:00" finish="2011-03-22T22:37:31.4346405+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetAllCustomersTest" storage="d:\新建文件夹 (2)\wpfmvvmsample\wpfmvvmsample.viewmodels.unittest\bin\debug\wpfmvvmsample.viewmodels.unittest.dll" id="a5c7d597-9446-99d2-fb14-31125fcf7e06">
+      <Execution id="dc4664e3-0674-4cc2-ac51-f253118a8d09" />
+      <TestMethod codeBase="D:/新建文件夹 (2)/WpfMVVMSample/WpfMVVMSample.ViewModels.UnitTest/bin/Debug/WpfMVVMSample.ViewModels.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WpfMVVMSample.ViewModels.UnitTest.AllCustomerViewModelTest, WpfMVVMSample.ViewModels.UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllCustomersTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a5c7d597-9446-99d2-fb14-31125fcf7e06" executionId="dc4664e3-0674-4cc2-ac51-f253118a8d09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="dc4664e3-0674-4cc2-ac51-f253118a8d09" testId="a5c7d597-9446-99d2-fb14-31125fcf7e06" testName="GetAllCustomersTest" computerName="ELVIS" duration="00:00:00.0612832" startTime="2011-03-22T22:37:30.5655908+08:00" endTime="2011-03-22T22:37:30.9306116+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc4664e3-0674-4cc2-ac51-f253118a8d09">
+    </UnitTestResult>
+  </Results>
+</TestRun>

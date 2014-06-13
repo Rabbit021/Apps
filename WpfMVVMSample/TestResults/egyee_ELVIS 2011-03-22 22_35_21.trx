@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a0f34e0b-17b4-4802-92c4-26d57e01e5a8" name="egyee@ELVIS 2011-03-22 22:35:21" runUser="elvis\egyee" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="722243e1-419e-4b75-bd87-36ce219246a9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="egyee_ELVIS 2011-03-22 22_35_21">
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Foundation\bin\Debug\WpfMVVMSample.Foundation.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.ViewModels\bin\Debug\WpfMVVMSample.ViewModels.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Models\bin\Debug\WpfMVVMSample.Models.dll" />
+      <DeploymentItem filename="D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.IService\bin\Debug\WpfMVVMSample.IService.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-03-22T22:35:21.5772784+08:00" queuing="2011-03-22T22:35:21.6084784+08:00" start="2011-03-22T22:35:21.6396785+08:00" finish="2011-03-22T22:35:22.1076793+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="GetAllCustomersTest" storage="d:\新建文件夹 (2)\wpfmvvmsample\wpfmvvmsample.viewmodels.unittest\bin\debug\wpfmvvmsample.viewmodels.unittest.dll" id="a5c7d597-9446-99d2-fb14-31125fcf7e06">
+      <Execution id="d81f195f-df44-4017-9a5d-b4e28004215f" />
+      <TestMethod codeBase="D:/新建文件夹 (2)/WpfMVVMSample/WpfMVVMSample.ViewModels.UnitTest/bin/Debug/WpfMVVMSample.ViewModels.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WpfMVVMSample.ViewModels.UnitTest.AllCustomerViewModelTest, WpfMVVMSample.ViewModels.UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetAllCustomersTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a5c7d597-9446-99d2-fb14-31125fcf7e06" executionId="d81f195f-df44-4017-9a5d-b4e28004215f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d81f195f-df44-4017-9a5d-b4e28004215f" testId="a5c7d597-9446-99d2-fb14-31125fcf7e06" testName="GetAllCustomersTest" computerName="ELVIS" duration="00:00:00.0942707" startTime="2011-03-22T22:35:21.6864786+08:00" endTime="2011-03-22T22:35:22.0920793+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d81f195f-df44-4017-9a5d-b4e28004215f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method WpfMVVMSample.ViewModels.UnitTest.AllCustomerViewModelTest.GetAllCustomersTest threw exception: 
+System.ComponentModel.Composition.ChangeRejectedException: The composition remains unchanged. The changes were rejected because of the following error(s): The composition produced a single composition error. The root cause is provided below. Review the CompositionException.Errors property for more detailed information.
+
+1) No valid exports were found that match the constraint '((exportDefinition.ContractName == "WpfMVVMSample.IService.ICustomerService") AndAlso (exportDefinition.Metadata.ContainsKey("ExportTypeIdentity") AndAlso "WpfMVVMSample.IService.ICustomerService".Equals(exportDefinition.Metadata.get_Item("ExportTypeIdentity"))))', invalid exports may have been rejected.
+
+Resulting in: Cannot set import 'WpfMVVMSample.ViewModels.AllCustomerViewModel.Service (ContractName="WpfMVVMSample.IService.ICustomerService")' on part 'WpfMVVMSample.ViewModels.AllCustomerViewModel'.
+Element: WpfMVVMSample.ViewModels.AllCustomerViewModel.Service (ContractName="WpfMVVMSample.IService.ICustomerService") --&gt;  WpfMVVMSample.ViewModels.AllCustomerViewModel
+</Message>
+          <StackTrace>    at System.ComponentModel.Composition.CompositionResult.ThrowOnErrors(AtomicComposition atomicComposition)
+   at System.ComponentModel.Composition.Hosting.ComposablePartExportProvider.Compose(CompositionBatch batch)
+   at System.ComponentModel.Composition.Hosting.CompositionContainer.Compose(CompositionBatch batch)
+   at System.ComponentModel.Composition.AttributedModelServices.ComposeParts(CompositionContainer container, Object[] attributedParts)
+   at WpfMVVMSample.Foundation.ObservableObject.Compose() in D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Foundation\ObservableObject.cs:line 108
+   at WpfMVVMSample.Foundation.ObservableObject..ctor() in D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.Foundation\ObservableObject.cs:line 17
+   at WpfMVVMSample.ViewModels.AllCustomerViewModel..ctor()
+   at WpfMVVMSample.ViewModels.UnitTest.AllCustomerViewModelTest.GetAllCustomersTest() in D:\新建文件夹 (2)\WpfMVVMSample\WpfMVVMSample.ViewModels.UnitTest\AllCustomerViewModelTest.cs:line 20
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
