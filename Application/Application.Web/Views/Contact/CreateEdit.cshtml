@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "CreateEdit";
+}
+
+<table class="table">
+    <tr>
+        <th colspan=3>Profile Information</th>
+    </tr>
+    <tbody data-bind="with: profile">
+        <tr>
+            <td>
+                <input class ="input-large" data-bind='value: FirstName' placeholder="FirstName"/>
+            </td>
+            <td>
+                <input class ="input-large" data-bind='value: LastName' placeholder="LastName"/>
+            </td> 
+            <td>
+                <input class ="input-large" data-bind='value: Email' placeholder="Emial"/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-small btn-success" data-bind="click:saveProfile" >Save Profile</button>
+<input class ="btn btn-small btn-primary" type="button" value="Back To Profile List"
+    data-bind="click:$root.backToProfileList" />
+<script src="~/Scripts/CreateEdit.js"></script>
+
