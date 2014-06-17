@@ -310,6 +310,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Application.DTO\Application.DTO.csproj">
+      <Project>{fd3bf524-10a3-46af-b0c4-7ff7ff0517da}</Project>
+      <Name>Application.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Manager\Application.Manager.csproj">
+      <Project>{be7b5a51-f847-4265-b2a1-2e2974b15b5f}</Project>
+      <Name>Application.Manager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
