@@ -41,5 +41,14 @@ namespace UnitOfWork.Controllers
 			}
 			return View();
 		}
+
+		public ActionResult GetAll()
+		{
+			using (var unit = this.Manager.NewUnitOfWork())
+			{
+				this.ArticleRepository.GetAll();
+			}
+			return View();
+		}
 	}
 }

@@ -16,7 +16,7 @@ namespace UnitOfWork
 			routes.MapRoute(
 				name: "Default",
 				url: "{controller}/{action}/{id}",
-				defaults: new { controller = "Article", action = "Test", id = UrlParameter.Optional }
+				defaults: new { controller = "Article", action = "GetAll", id = UrlParameter.Optional }
 			);
 		}
 	}
