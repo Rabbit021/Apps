@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace UnitOfWork.Models
 		public DbSet<Article> Articles { get; set; }
 
 		public WebDbContext()
+			: base("name=connectionStr")
 		{
 			Configuration.LazyLoadingEnabled = false;
 		}
@@ -26,7 +28,7 @@ namespace UnitOfWork.Models
 			base.OnModelCreating(modelBuilder);
 		}
 
-		public void Dispose()
+		public new void Dispose()
 		{
 		}
 	}

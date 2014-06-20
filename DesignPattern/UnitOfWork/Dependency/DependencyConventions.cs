@@ -22,7 +22,9 @@ namespace UnitOfWork.Dependency
 
 			container.Register(
 				Component.For<IUnitOfworkManager>().ImplementedBy<UnitOfworkManager>(),
-				AllTypes.FromThisAssembly().BasedOn<IHttpController>().LifestyleTransient()
+				Component.For<IArticleRepository, ArticleRepository>().ImplementedBy<ArticleRepository>(),
+				Component.For<IUnitOfWork, UnitOfWork.Models.UnitOfWork>().ImplementedBy<UnitOfWork.Models.UnitOfWork>(),
+				Component.For<IWeDbbContext,WebDbContext>().ImplementedBy<WebDbContext>()
 				);
 		}
 	}
