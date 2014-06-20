@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
+using System.Runtime.InteropServices;
 using EntityState = System.Data.Entity.EntityState;
 
 namespace UnitOfWork.Models
@@ -74,11 +75,14 @@ namespace UnitOfWork.Models
 			{
 				switch (entry.State)
 				{
-					case System.Data.Entity.EntityState.Modified:
+					case EntityState.Modified:
+						entry.State = EntityState.Unchanged;
 						break;
 					case EntityState.Added:
+						entry.State = EntityState.Detached;
 						break;
 					case EntityState.Deleted:
+						entry.State = EntityState.Unchanged;
 						break;
 				}
 			}
@@ -86,7 +90,22 @@ namespace UnitOfWork.Models
 
 		public void Dispose()
 		{
+			if (this.ObjectContext.Connection.State == ConnectionState.Open)
+				this.ObjectContext.Connection.Close();
+			Dispose(true);
+			GC.SuppressFinalize(this);
+		}
 
+		protected virtual void Dispose(bool disposing)
+		{
+			if (disposing)
+			{
+
+			}
+		}
+		~UnitOfWork()
+		{
+			Dispose(false);
 		}
 	}
 }

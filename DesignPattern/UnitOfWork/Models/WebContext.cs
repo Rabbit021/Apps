@@ -26,7 +26,7 @@ namespace UnitOfWork.Models
 			base.OnModelCreating(modelBuilder);
 		}
 
-		public new void Dispose()
+		public void Dispose()
 		{
 		}
 	}
