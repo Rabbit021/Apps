@@ -15,6 +15,4 @@ namespace Application.DTO.ProfileModule
         public List<AddressDTO> AddressDTO { get; set; }
 
     }
-
-    
 }

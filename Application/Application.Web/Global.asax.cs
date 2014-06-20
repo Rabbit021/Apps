@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Castle.Windsor;
+using Application.Web.Dependency;
+using Castle.Windsor.Installer;
 
 namespace Application.Web
 {
@@ -14,7 +17,15 @@ namespace Application.Web
 
     public class MvcApplication : System.Web.HttpApplication
     {
-        protected void Application_Start()
+		private readonly IWindsorContainer contaner;
+
+		public MvcApplication()
+		{
+			//this.contaner = new WindsorContainer().Install(new DependencyConventions());
+			this.contaner = new WindsorContainer().Install(FromAssembly.This());
+		}
+
+		protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
 
@@ -23,6 +34,15 @@ namespace Application.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+			var controllerFactory = new WindsorControllerFactory(contaner.Kernel);
+			ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
+
+		public override void Dispose()
+		{
+			this.contaner.Dispose();
+			base.Dispose();
+		}
     }
 }

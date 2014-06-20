@@ -11,10 +11,11 @@ namespace Application.Manager.Implementation
 	public class ContactManager : IContactManager
 	{
 		#region Instance
-		private static ContactManager instance = new ContactManager();
-		public static ContactManager Instance { get { return instance; } }
-		private ContactManager() { }
+		//private static ContactManager instance = new ContactManager();
+		//public static ContactManager Instance { get { return instance; } }
 		#endregion
+
+		public ContactManager() { }
 
 		public List<ProfileDTO> FindAllProfiles()
 		{

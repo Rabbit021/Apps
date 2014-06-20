@@ -1,26 +1,26 @@
 ﻿using System;
-using System.Data;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Application.Core;
 using System.Data.Entity;
+using System.Data;
+using Application.DAL.Context;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
-using System.Runtime.InteropServices;
-using EntityState = System.Data.Entity.EntityState;
 
-namespace UnitOfWork.Models
+namespace Application.DAL
 {
-	public interface IUnitOfWork : IDisposable
-	{
-		void Commit();
-	}
-
 	public class UnitOfWork : IUnitOfWork
 	{
 		#region Context
-		private readonly WebDbContext _context;
-		public WebDbContext Context
+		private readonly TestDbContext _context;
+
+		public TestDbContext Context
 		{
 			get { return _context; }
 		}
+
 		#endregion
 
 		#region Transaction
@@ -40,16 +40,14 @@ namespace UnitOfWork.Models
 		}
 		#endregion
 
-		public UnitOfWork(IWeDbbContext context)
+		public UnitOfWork(IContext context)
 		{
-			this._context = context as WebDbContext;
-
+			this._context = context as TestDbContext;
 			this._objectContext = ((IObjectContextAdapter)this.Context).ObjectContext;
-
-			if (this._objectContext.Connection.State != ConnectionState.Open)
+			if (this.ObjectContext.Connection.State != ConnectionState.Open)
 			{
-				this._objectContext.Connection.Open();
-				this._transaction = _objectContext.Connection.BeginTransaction();
+				this.ObjectContext.Connection.Open();
+				this._transaction = this.ObjectContext.Connection.BeginTransaction();
 			}
 		}
 
@@ -60,17 +58,16 @@ namespace UnitOfWork.Models
 				this.Context.SaveChanges();
 				this.Transaction.Commit();
 			}
-			catch (Exception)
+			catch
 			{
-				RollBack();
+				RoolBack();
 				throw;
 			}
 		}
 
-		private void RollBack()
+		public void RoolBack()
 		{
 			this.Transaction.Rollback();
-
 			foreach (var entry in this.Context.ChangeTracker.Entries())
 			{
 				switch (entry.State)
