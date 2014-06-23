@@ -1,9 +1,10 @@
 ﻿var ProfileViewModel = function () {
     var self = this;
-    var url ="Contact/GetAllProfiles"
+    var url = "Contact/GetAllProfiles"
+    var delurl = "Contact/DeleteProfiles";
 
     var refresh = function () {
-        $.post(url ,{}, function(data) {
+        $.post(url, {}, function (data) {
             self.Profiles(data);
         });
     };
@@ -16,8 +17,9 @@
         window.location.href = "/Contact/CreateEdit/" + profile.ProfileId;
     };
     self.removeProfile = function (profile) {
-        if (confirm(("Remove")))
-            self.Profiles.remove(profile);
+        $.post(delurl, { Id: profile.ProfileId }, function (data) {
+            self.Profiles(data);
+        });
     }
     refresh();
 };

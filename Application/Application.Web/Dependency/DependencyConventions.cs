@@ -10,6 +10,8 @@ using Application.Manager.Implementation;
 using Castle.Facilities.Logging;
 using Application.Core;
 using Application.DAL;
+using Application.Manager;
+using Application.DAL.Context;
 
 namespace Application.Web.Dependency
 {
@@ -22,7 +24,9 @@ namespace Application.Web.Dependency
 			log4net.Config.XmlConfigurator.Configure();
 			container.Register(
 				Component.For<IContactManager>().ImplementedBy<ContactManager>(),
-				Component.For<IUnitOfWork>().ImplementedBy<UnitOfWork>()
+				Component.For<IUnitOfWork>().ImplementedBy<UnitOfWork>(),
+				Component.For<IUnitOfWorkManager>().ImplementedBy<UnitOfWorkManager>(),
+				Component.For<IContext>().ImplementedBy<TestDbContext>()
 				).AddFacility<LoggingFacility>(x => x.UseLog4Net());
 		}
 	}

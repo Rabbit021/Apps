@@ -27,6 +27,13 @@ namespace Application.Web.Controllers
 		}
 
 		[HttpPost]
+		public JsonResult DeleteProfiles(int Id)
+		{
+			this.Manager.DeleteProfile(Id);
+			return Json(true);
+		}
+
+		[HttpPost]
 		public JsonResult GetAllProfiles()
 		{
 			var profiles = this.Manager.FindAllProfiles();

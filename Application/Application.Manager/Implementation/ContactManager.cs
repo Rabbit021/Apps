@@ -8,14 +8,19 @@ using System.Diagnostics;
 
 namespace Application.Manager.Implementation
 {
-	public class ContactManager : IContactManager
+	public class ContactManager : BaseManager, IContactManager
 	{
-		#region Instance
-		//private static ContactManager instance = new ContactManager();
-		//public static ContactManager Instance { get { return instance; } }
-		#endregion
+		private bool _isDispose;
+		public bool IsDispose
+		{
+			get { return _isDispose; }
+			set { _isDispose = value; }
+		}
 
-		public ContactManager() { }
+		public ContactManager(IUnitOfWorkManager unit)
+			: base(unit)
+		{
+		}
 
 		public List<ProfileDTO> FindAllProfiles()
 		{
@@ -45,7 +50,11 @@ namespace Application.Manager.Implementation
 
 		public void DeleteProfile(int profileId)
 		{
+			using (var unit = this.Manager.NewUnitOfWork())
+			{
 
+				unit.Commit();
+			}
 		}
 
 		public void SaveProfileInformation(ProfileDTO profile)
@@ -60,6 +69,21 @@ namespace Application.Manager.Implementation
 		{
 			var initData = new ContactForm();
 			return initData;
+		}
+	}
+
+	public class BaseManager
+	{
+		private readonly IUnitOfWorkManager manager;
+
+		public IUnitOfWorkManager Manager
+		{
+			get { return manager; }
+		}
+
+		public BaseManager(IUnitOfWorkManager unit)
+		{
+			this.manager = unit;
 		}
 	}
 }

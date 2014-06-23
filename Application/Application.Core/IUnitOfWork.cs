@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Application.Core
 {
-	public interface IUnitOfWork
+	public interface IUnitOfWork:IDisposable
 	{
 		void Commit();
 		void RoolBack();

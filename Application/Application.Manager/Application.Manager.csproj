@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,14 +47,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contract\IContactManager.cs" />
+    <Compile Include="Contract\IUnitOfWorkManager.cs" />
     <Compile Include="Implementation\ContactManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWorkManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application.Core\Application.Core.csproj">
+      <Project>{2CD85967-B2A6-4A31-9E21-C783005D6651}</Project>
+      <Name>Application.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.DAL\Application.DAL.csproj">
+      <Project>{556A4893-5415-4F06-9C0B-9FB1C5D43F6C}</Project>
+      <Name>Application.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Application.DTO\Application.DTO.csproj">
       <Project>{fd3bf524-10a3-46af-b0c4-7ff7ff0517da}</Project>
       <Name>Application.DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
