@@ -5,8 +5,13 @@
         xmlns:GMap_NET_WindowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="GMap.MainWindow"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-    	<GroupBox Header="GroupBox">
-    		<GMap_NET_WindowsPresentation:GMapControl x:Name="mapControl" MaxZoom="24" MinZoom="1" Zoom="13"/>
-    	</GroupBox>
+        <StackPanel x:Name="stackPanel" Height="100" Margin="0,0,12,0" VerticalAlignment="Top" Background="Black">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </StackPanel>
+        <Button Content="Button" Width="75" HorizontalAlignment="Left" Margin="15,139,0,151.163" d:LayoutOverrides="Height" />
+        <GroupBox Header="GroupBox" Visibility="Collapsed">
+            <GMap_NET_WindowsPresentation:GMapControl x:Name="mapControl" MaxZoom="24" MinZoom="1" Zoom="13" Height="289.163" Width="497"/>
+        </GroupBox>
+        <TextBox Text="{Binding CusTest.Name,Mode=TwoWay}"></TextBox>
     </Grid>
 </Window>

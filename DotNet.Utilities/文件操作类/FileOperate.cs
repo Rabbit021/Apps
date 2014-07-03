@@ -32,7 +32,6 @@ namespace DotNet.Utilities
         #region 读文件
         protected string Read_Txt(string filename)
         {
-
             Encoding code = Encoding.GetEncoding("gb2312");
             string temp = HttpContext.Current.Server.MapPath("Precious\\" + filename + ".txt");
             string str = "";
@@ -46,7 +45,7 @@ namespace DotNet.Utilities
                 }
                 catch { }
                 sr.Close();
-                sr.Dispose();
+				sr.Dispose();
             }
             else
             {
@@ -74,10 +73,14 @@ namespace DotNet.Utilities
         /// <returns>.gif|.html格式</returns>
         public static string GetPostfixStr(string filename)
         {
-            int start = filename.LastIndexOf(".");
-            int length = filename.Length;
-            string postfix = filename.Substring(start, length - start);
-            return postfix;
+			//int start = filename.LastIndexOf(".");
+			//int length = filename.Length;
+			//string postfix = filename.Substring(start, length - start);
+			//return postfix;
+
+			//.net 4.0
+			return Path.GetExtension(filename);
+
         }
         #endregion
 
