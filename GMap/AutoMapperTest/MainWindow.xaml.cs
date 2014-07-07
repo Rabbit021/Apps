@@ -72,6 +72,28 @@ namespace AutoMapperTest
 				if (vm == null) return;
 			}));
 
+
+		#region Test
+		public int Test
+		{
+			get { return (int)GetValue(TestProperty); }
+			set { SetValue(TestProperty, value); }
+		}
+
+		public static readonly DependencyProperty TestProperty =
+			DependencyProperty.Register("Test", typeof(int), typeof(MainWindowVM),
+			new PropertyMetadata(
+				(sender, e) =>
+				{
+					var vm = sender as MainWindowVM;
+					if (vm == null) return;
+				}
+			),
+
+			new ValidateValueCallback(x => { return true; }));
+
+		#endregion
+
 		#endregion
 	}
 }

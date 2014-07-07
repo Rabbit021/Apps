@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsycUdp", "AsycUdp\AsycUdp.csproj", "{D12837F4-E63A-4D78-8789-8C424AD733D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpServiceLib", "UdpServiceLib\UdpServiceLib.csproj", "{23EA6C03-C0BB-4506-B9CF-5F0E33CE78E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpClientLib", "UdpClientLib\UdpClientLib.csproj", "{A603A14D-A684-4E84-9F30-DEA5186C9B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D12837F4-E63A-4D78-8789-8C424AD733D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12837F4-E63A-4D78-8789-8C424AD733D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12837F4-E63A-4D78-8789-8C424AD733D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12837F4-E63A-4D78-8789-8C424AD733D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23EA6C03-C0BB-4506-B9CF-5F0E33CE78E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23EA6C03-C0BB-4506-B9CF-5F0E33CE78E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23EA6C03-C0BB-4506-B9CF-5F0E33CE78E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23EA6C03-C0BB-4506-B9CF-5F0E33CE78E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A603A14D-A684-4E84-9F30-DEA5186C9B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A603A14D-A684-4E84-9F30-DEA5186C9B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A603A14D-A684-4E84-9F30-DEA5186C9B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A603A14D-A684-4E84-9F30-DEA5186C9B98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
