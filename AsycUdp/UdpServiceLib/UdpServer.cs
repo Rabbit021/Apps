@@ -35,8 +35,10 @@ namespace UdpServerLib
 			this.remoteEP = new IPEndPoint(Dns.GetHostAddresses(Dns.GetHostName())[0], remotePort);
 
 			this.udpReviver = new UdpClient(this.ipEndPoint);
+			this.udpReviver.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
 			this.udpSender = new UdpClient(this.remoteEP);
+			this.udpSender.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
 			//
 			this.udpReciverState = new UdpState
