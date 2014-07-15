@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsycUdpCommuncation", "AsycUdpCommuncation\AsycUdpCommuncation.csproj", "{6ECB1171-C672-434E-AD53-F825EF12F96D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpServer", "UdpServer\UdpServer.csproj", "{91536CF4-579F-42B0-8BEC-F017574E0937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ECB1171-C672-434E-AD53-F825EF12F96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECB1171-C672-434E-AD53-F825EF12F96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECB1171-C672-434E-AD53-F825EF12F96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECB1171-C672-434E-AD53-F825EF12F96D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91536CF4-579F-42B0-8BEC-F017574E0937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91536CF4-579F-42B0-8BEC-F017574E0937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91536CF4-579F-42B0-8BEC-F017574E0937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91536CF4-579F-42B0-8BEC-F017574E0937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
