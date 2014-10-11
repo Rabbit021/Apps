@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsServiceHostsService", "WindowsServiceHostsService\WindowsServiceHostsService.csproj", "{4286CA02-4593-4F58-9961-7E0C5CE0F8F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFHostedWindowsService", "WCFHostedWindowsService\WCFHostedWindowsService.csproj", "{CE36C3FC-6DD7-4710-B850-8FC9350EBCE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4286CA02-4593-4F58-9961-7E0C5CE0F8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4286CA02-4593-4F58-9961-7E0C5CE0F8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4286CA02-4593-4F58-9961-7E0C5CE0F8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4286CA02-4593-4F58-9961-7E0C5CE0F8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE36C3FC-6DD7-4710-B850-8FC9350EBCE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE36C3FC-6DD7-4710-B850-8FC9350EBCE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE36C3FC-6DD7-4710-B850-8FC9350EBCE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE36C3FC-6DD7-4710-B850-8FC9350EBCE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

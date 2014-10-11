@@ -1,0 +1,65 @@
+﻿@model DapperaSample.Models.TBMobileDetails
+
+@{
+    ViewBag.Title = "AddMobiles";
+}
+
+<h2>AddMobiles</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TBMobileDetails</legend>
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileID)
+            @Html.ValidationMessageFor(model => model.MobileID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobileName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileName)
+            @Html.ValidationMessageFor(model => model.MobileName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobileIMEno)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileIMEno)
+            @Html.ValidationMessageFor(model => model.MobileIMEno)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobileMannfactured)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileMannfactured)
+            @Html.ValidationMessageFor(model => model.MobileMannfactured)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Mobileprice)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Mobileprice)
+            @Html.ValidationMessageFor(model => model.Mobileprice)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
